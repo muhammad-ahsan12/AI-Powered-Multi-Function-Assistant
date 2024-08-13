@@ -17,7 +17,7 @@ from langchain.vectorstores import FAISS
 from langchain_core.messages import HumanMessage
 
 # Set up the environment
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyA0S7F21ExbBnR06YXkEi7aj94nWP5kJho'
+os.environ['GOOGLE_API_KEY'] = 'your google api key'
 
 # Initialize models
 llm = ChatGoogleGenerativeAI(model='gemini-1.5-pro')
@@ -181,7 +181,7 @@ def main():
                 user_question_text = user_question_speech
                     
         if user_question_text and url:
-            os.environ['GOOGLE_API_KEY'] = "AIzaSyA0S7F21ExbBnR06YXkEi7aj94nWP5kJho"  
+            os.environ['GOOGLE_API_KEY'] = "your google api key"  
             r = requests.get(url)
             soup = BeautifulSoup(r.content, 'html.parser')
             text = soup.get_text(separator='\n')
@@ -192,7 +192,7 @@ def main():
             vectordb = FAISS.from_texts(texts=docs, embedding=embeddings)
             retriever = vectordb.as_retriever(search_kwargs={"k": 3})
 
-            llm = ChatGroq(model="llama3-70b-8192", groq_api_key="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")
+            llm = ChatGroq(model="llama3-70b-8192", groq_api_key="your groq api key")
             qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever)
 
             full_query = {
