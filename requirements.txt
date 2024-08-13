@@ -1,0 +1,10 @@
+streamlit
+langchain
+langchain-google-genai
+langchain-groq
+PyPDF2
+Pillow
+SpeechRecognition
+requests
+beautifulsoup4
+faiss-cpu
