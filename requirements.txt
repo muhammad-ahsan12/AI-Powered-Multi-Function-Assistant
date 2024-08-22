@@ -1,7 +1,7 @@
 streamlit
-langchain==0.0.47
-langchain-google-genai==0.0.1
-langchain-groq==0.0.1
+langchain==0.2.14
+langchain-google-genai==1.0.10
+langchain-groq==0.1.9
 PyPDF2==3.0.1
 Pillow==10.0.0
 SpeechRecognition==3.10.0
